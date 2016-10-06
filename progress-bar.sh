@@ -14,4 +14,5 @@ progress-bar() {
       sleep 1
       clean_line
   done
+  clean_line
 }
