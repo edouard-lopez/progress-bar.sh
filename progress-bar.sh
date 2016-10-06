@@ -6,7 +6,7 @@ progress-bar() {
 
     already_done() { for ((done=0; done<$elapsed; done++)); do printf "▇"; done }
     remaining() { for ((remain=$elapsed; remain<$duration; remain++)); do printf " "; done }
-    percentage() { printf "| %s%% %s %s" $(( (($elapsed)*100)/($duration)*100/100 ))  $elapsed $duration; }
+    percentage() { printf "| %s%%" $(( (($elapsed)*100)/($duration)*100/100 )); }
     clean_line() { printf "\r"; }
 
   for (( elapsed=1; elapsed<=$duration; elapsed++ )); do
