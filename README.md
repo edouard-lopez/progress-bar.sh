@@ -17,7 +17,10 @@
 
 ### Why?
 
-First, working in the terminal doesn't mean our user experience has to be poor. Second, check-out [similar projects'](https://github.com/search?l=Shell&o=desc&p=2&q=progress+bar&ref=searchresults&s=stars&type=Repositories&utf8=%E2%9C%93) source code and you'll understand.
+1. _I needed one_ ;
+1. What I found was _too ugly and too complicated_ ;
+1. I wanted **a good UX** ;
+1. Check-out [similar projects'](https://github.com/search?l=Shell&o=desc&p=2&q=progress+bar&ref=searchresults&s=stars&type=Repositories&utf8=%E2%9C%93) source code and you'll understand.
 
 ### Who use it?
 
