@@ -7,12 +7,13 @@
 
 ### Usage
 
-1. Copy to your code or `source ./progress-bar.sh`
-2. Call
+1. Copy to your code or **source**:
 
-```
-progress 5
-```
+        source ./progress-bar.sh
+
+2. Call with a `duration`:
+
+        progress-bar 5
 
 ### Why?
 
