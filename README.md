@@ -12,3 +12,7 @@
 ```
 progress 5
 ```
+
+### Why?
+
+Just check out the alternatives' source code and you'll understand.
