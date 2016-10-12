@@ -17,7 +17,8 @@
 
 ### Why?
 
-Just check out the alternatives' source code and you'll understand.
+First, working in the terminal doesn't mean our user experience has to be poor. Second, check-out [similar projects'](https://github.com/search?l=Shell&o=desc&p=2&q=progress+bar&ref=searchresults&s=stars&type=Repositories&utf8=%E2%9C%93) source code and you'll understand.
+
 
 ### License
 
