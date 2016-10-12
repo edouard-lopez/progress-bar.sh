@@ -25,4 +25,4 @@ First, working in the terminal doesn't mean our user experience has to be poor. 
 
 ### License
 
-> MIT dev@edouard-lopez.com
+> MIT dev@edouard-lopez.com.
