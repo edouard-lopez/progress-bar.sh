@@ -19,6 +19,9 @@
 
 First, working in the terminal doesn't mean our user experience has to be poor. Second, check-out [similar projects'](https://github.com/search?l=Shell&o=desc&p=2&q=progress+bar&ref=searchresults&s=stars&type=Repositories&utf8=%E2%9C%93) source code and you'll understand.
 
+### Who use it?
+
+* [byzanz-gui](https://github.com/edouard-lopez/byzanz-gui).
 
 ### License
 
