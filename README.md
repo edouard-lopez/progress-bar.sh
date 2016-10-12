@@ -2,7 +2,8 @@
 
 > Simple & sexy progress bar for `bash`, give it a duration and it will do the rest.
 
-![progress-bar.sh in action](./preview.gif)
+![progress-bar.sh in action on light terminal](./preview.gif)
+![progress-bar.sh in action on dark terminal](./preview-dark.gif)
 
 ### Usage
 
