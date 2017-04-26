@@ -26,6 +26,12 @@
 
 * [byzanz-gui](https://github.com/edouard-lopez/byzanz-gui).
 
+### Test
+
+**Requirements:** [`bats`](https://github.com/sstephenson/bats).
+
+    $ bats ./tests.bats
+
 ### License
 
 > MIT dev@edouard-lopez.com.
