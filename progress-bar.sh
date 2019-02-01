@@ -1,13 +1,19 @@
-#!/usr/bin/env bash
+#!usr/bin/env bash
 
 SLEEP_DURATION=${SLEEP_DURATION:=1}  # default to 1 second, use to speed up tests
 
 progress-bar() {
+
   local duration=${1}
-
-
-  already_done() { for ((done=0; done<elapsed; done=done+1)); do printf "▇"; done }
-  remaining() { for ((remain=elapsed; remain<duration; remain=remain+1)); do printf " "; done }
+  local columns=$(tput cols)
+  local spaceAvailable=$((columns-5))
+ 
+  if (( duration <= spaceAvailable )); then factor=1;
+  else factor=$((duration/spaceAvailable));
+  fi
+   	
+  already_done() { for ((done=0; done< (elapsed/factor) ; done=done+1)); do printf "▇"; done }
+  remaining() { for ((remain= (elapsed/factor) ; remain<(duration/factor) ; remain=remain+1)); do printf " "; done }
   percentage() { printf "| %s%%" $(( ((elapsed)*100)/(duration)*100/100 )); }
   clean_line() { printf "\r"; }
 
@@ -18,3 +24,5 @@ progress-bar() {
   done
   clean_line
 }
+
+
