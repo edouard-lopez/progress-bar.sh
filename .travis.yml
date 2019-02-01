@@ -1,0 +1,11 @@
+language: bash
+
+before_install:
+  - sudo add-apt-repository ppa:duggan/bats --yes
+  - sudo apt-get update --quiet --quiet
+  - sudo apt-get install --quiet --quiet bats
+script:
+  - bats tests.bats
+
+notifications:
+  email: false
