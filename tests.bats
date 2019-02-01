@@ -2,6 +2,10 @@
 
 source ./progress-bar.sh
 
+SLEEP_DURATION=.01
+export SLEEP_DURATION
+
+
 @test "missing duration: do nothing" {
   run progress-bar
 
