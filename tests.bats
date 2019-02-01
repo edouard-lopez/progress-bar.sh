@@ -6,14 +6,14 @@ SLEEP_DURATION=.01
 export SLEEP_DURATION
 
 
-@test "missing duration: do nothing" {
+@test "show nothings when no duration provided" {
   run progress-bar
 
   [[ $status == 0 ]]
   [[ "${lines[0]}" == $(printf "\r") ]]
 }
 
-@test "1sec:" {
+@test "show progress-bar when given duration" {
   run progress-bar 1
 
   [[ $status == 0 ]]
