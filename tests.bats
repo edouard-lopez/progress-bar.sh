@@ -19,3 +19,11 @@ export SLEEP_DURATION
   [[ $status == 0 ]]
   [[ "$output" == $(printf "▇| 100%%\r\r") ]]
 }
+
+@test "show multiple blocks on one line" {
+  run progress-bar 2
+
+  echo "$output" > /tmp/bats
+  [[ $status == 0 ]]
+  [[ "$output" == $(printf "▇ | 50%%\r▇▇| 100%%\r\r") ]]
+}
