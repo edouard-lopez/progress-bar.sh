@@ -1,19 +1,28 @@
-#!usr/bin/env bash
+#!/usr/bin/env bash
 
 SLEEP_DURATION=${SLEEP_DURATION:=1}  # default to 1 second, use to speed up tests
 
 progress-bar() {
+  local duration
+  local columns
+  local space_available
+  local fit_to_screen  
+  local space_reserved
 
-  local duration=${1}
-  local columns=$(tput cols)
-  local spaceAvailable=$((columns-5))
- 
-  if (( duration <= spaceAvailable )); then factor=1;
-  else factor=$((duration/spaceAvailable));
+  space_reserved=10   # reserved width for the percentage value
+  duration=${1}
+  columns=$(tput cols)
+  space_available=$(( columns-space_reserved ))
+
+  if (( duration < space_available )); then 
+  	fit_to_screen=1; 
+  else 
+	fit_to_screen=$(( duration / space_available )); 
+	fit_to_screen=$((fit_to_screen+1)); 
   fi
-   	
-  already_done() { for ((done=0; done< (elapsed/factor) ; done=done+1)); do printf "▇"; done }
-  remaining() { for ((remain= (elapsed/factor) ; remain<(duration/factor) ; remain=remain+1)); do printf " "; done }
+
+  already_done() { for ((done=0; done<(elapsed / fit_to_screen) ; done=done+1 )); do printf "▇"; done }
+  remaining() { for (( remain=(elapsed/fit_to_screen) ; remain<(duration/fit_to_screen) ; remain=remain+1 )); do printf " "; done }
   percentage() { printf "| %s%%" $(( ((elapsed)*100)/(duration)*100/100 )); }
   clean_line() { printf "\r"; }
 
@@ -24,5 +33,6 @@ progress-bar() {
   done
   clean_line
 }
+
 
 
