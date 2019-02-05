@@ -36,4 +36,5 @@
 
 ### License
 
-> MIT dev@edouard-lopez.com.
+> MIT contact@edouard-lopez.com.
+
