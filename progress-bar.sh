@@ -9,7 +9,7 @@ progress-bar() {
   local fit_to_screen  
   local space_reserved
 
-  space_reserved=10   # reserved width for the percentage value
+  space_reserved=6   # reserved width for the percentage value
   duration=${1}
   columns=$(tput cols)
   space_available=$(( columns-space_reserved ))
