@@ -17,8 +17,8 @@ progress-bar() {
   if (( duration < space_available )); then 
   	fit_to_screen=1; 
   else 
-	fit_to_screen=$(( duration / space_available )); 
-	fit_to_screen=$((fit_to_screen+1)); 
+    fit_to_screen=$(( duration / space_available )); 
+    fit_to_screen=$((fit_to_screen+1)); 
   fi
 
   already_done() { for ((done=0; done<(elapsed / fit_to_screen) ; done=done+1 )); do printf "▇"; done }
