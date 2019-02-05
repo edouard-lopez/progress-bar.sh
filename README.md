@@ -15,6 +15,8 @@
 
         progress-bar 5
 
+:information_source: Speed can be initially defined by [exporting `SLEEP_DURATION`](tests.bats#L5).
+
 ### Why?
 
 1. _I needed one_ ;
