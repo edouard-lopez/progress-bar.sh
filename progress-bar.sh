@@ -23,7 +23,7 @@ progress-bar() {
 
   already_done() { for ((done=0; done<(elapsed / fit_to_screen) ; done=done+1 )); do printf "▇"; done }
   remaining() { for (( remain=(elapsed/fit_to_screen) ; remain<(duration/fit_to_screen) ; remain=remain+1 )); do printf " "; done }
-  percentage() { printf "| %s%%" $(( ((elapsed)*100)/(duration)*100/100 )); }
+  percentage() { printf "| %s%%" $(( (elapsed*100)/duration )); }
   clean_line() { printf "\r"; }
 
   for (( elapsed=1; elapsed<=duration; elapsed=elapsed+1 )); do
