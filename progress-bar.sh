@@ -21,7 +21,7 @@ progress-bar() {
   already_done() { for ((done=0; done<(elapsed / fit_to_screen) ; done=done+1 )); do printf '%b' "$BAR_FILL"; done }
   remaining() { for (( remain=(elapsed/fit_to_screen) ; remain<(duration/fit_to_screen) ; remain=remain+1 )); do printf '%b' "$BAR_EMPTY"; done }
   percentage() { printf "| %s%%" $(( (elapsed*100)/duration )); }
-  clean_line() { printf "\r"; }
+  clean_line() { printf "\r\e[K"; }
 
   for (( elapsed=1; elapsed<=duration; elapsed=elapsed+1 )); do
       already_done; remaining; percentage
