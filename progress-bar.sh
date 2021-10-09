@@ -13,13 +13,7 @@ progress-bar() {
   duration=${1}
   columns=$(tput cols)
   space_available=$(( columns-space_reserved ))
-
-  if (( duration < space_available )); then 
-  	fit_to_screen=1; 
-  else 
-    fit_to_screen=$(( duration / space_available )); 
-    fit_to_screen=$((fit_to_screen+1)); 
-  fi
+  fit_to_screen=$(( (duration / space_available) + 1 ))
 
   already_done() { for ((done=0; done<(elapsed / fit_to_screen) ; done=done+1 )); do printf "▇"; done }
   remaining() { for (( remain=(elapsed/fit_to_screen) ; remain<(duration/fit_to_screen) ; remain=remain+1 )); do printf " "; done }
